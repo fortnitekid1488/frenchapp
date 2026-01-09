@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="description" content="Изучение французского языка - Урок 3 МГИМО">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>Français - Leçon 3</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇫🇷</text></svg>">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="logo">🇫🇷 Leçon 3</h1>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn active" data-section="home">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Главная</span>
+        </button>
+        <button class="nav-btn" data-section="texte">
+          <span class="nav-icon">📖</span>
+          <span class="nav-label">Текст</span>
+        </button>
+        <button class="nav-btn" data-section="vocabulaire">
+          <span class="nav-icon">📚</span>
+          <span class="nav-label">Словарь</span>
+        </button>
+        <button class="nav-btn" data-section="grammaire">
+          <span class="nav-icon">📐</span>
+          <span class="nav-label">Грамматика</span>
+        </button>
+        <button class="nav-btn" data-section="exercises">
+          <span class="nav-icon">✍️</span>
+          <span class="nav-label">Упражнения</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      
+      <!-- HOME Section -->
+      <section id="home" class="section active">
+        <div class="home-hero">
+          <h2>Dossier 2. Leçon 3</h2>
+          <p class="subtitle">La famille et les relations</p>
+        </div>
+        
+        <div class="progress-card">
+          <h3>📊 Ваш прогресс</h3>
+          <div class="progress-grid">
+            <div class="progress-item">
+              <div class="progress-circle" data-progress="texte">
+                <svg viewBox="0 0 36 36">
+                  <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="progress-fill" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span class="progress-text">0%</span>
+              </div>
+              <span class="progress-label">Текст</span>
+            </div>
+            <div class="progress-item">
+              <div class="progress-circle" data-progress="vocab">
+                <svg viewBox="0 0 36 36">
+                  <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="progress-fill" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span class="progress-text">0%</span>
+              </div>
+              <span class="progress-label">Словарь</span>
+            </div>
+            <div class="progress-item">
+              <div class="progress-circle" data-progress="exercises">
+                <svg viewBox="0 0 36 36">
+                  <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="progress-fill" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span class="progress-text">0%</span>
+              </div>
+              <span class="progress-label">Упражнения</span>
+            </div>
+          </div>
+          <button id="reset-progress" class="btn btn-secondary btn-sm">Сбросить прогресс</button>
+        </div>
+
+        <div class="quick-start">
+          <h3>🚀 Быстрый старт</h3>
+          <div class="quick-cards">
+            <button class="quick-card" data-goto="texte">
+              <span class="quick-icon">📖</span>
+              <span class="quick-title">Читать текст</span>
+              <span class="quick-desc">Les vacances des Jean</span>
+            </button>
+            <button class="quick-card" data-goto="vocabulaire">
+              <span class="quick-icon">🎴</span>
+              <span class="quick-title">Учить слова</span>
+              <span class="quick-desc">La famille, Les relations</span>
+            </button>
+            <button class="quick-card" data-goto="exercises">
+              <span class="quick-icon">✍️</span>
+              <span class="quick-title">Переводить</span>
+              <span class="quick-desc">RU → FR упражнения</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEXTE Section -->
+      <section id="texte" class="section">
+        <div class="section-header">
+          <h2>📖 Texte</h2>
+          <p>Les vacances des Jean</p>
+        </div>
+        
+        <div class="text-controls">
+          <button id="text-mode-read" class="btn btn-primary active">Читать</button>
+          <button id="text-mode-translate" class="btn btn-secondary">Переводить</button>
+          <button id="text-mode-memorize" class="btn btn-secondary">Запоминать</button>
+        </div>
+
+        <div id="text-content" class="text-content">
+          <!-- Text paragraphs will be inserted here -->
+        </div>
+        
+        <div id="text-vocabulary" class="vocabulary-sidebar">
+          <h4>📝 Слова из текста</h4>
+          <div class="vocab-list"></div>
+        </div>
+      </section>
+
+      <!-- VOCABULAIRE Section -->
+      <section id="vocabulaire" class="section">
+        <div class="section-header">
+          <h2>📚 Vocabulaire</h2>
+          <p>Тематический словарь</p>
+        </div>
+
+        <div class="vocab-tabs">
+          <button class="vocab-tab active" data-vocab="famille">La famille</button>
+          <button class="vocab-tab" data-vocab="relations">Les relations</button>
+          <button class="vocab-tab" data-vocab="expressions">Expressions</button>
+        </div>
+
+        <div class="vocab-mode-switch">
+          <button id="vocab-mode-list" class="btn btn-sm active">📋 Список</button>
+          <button id="vocab-mode-cards" class="btn btn-sm">🎴 Карточки</button>
+          <button id="vocab-mode-test" class="btn btn-sm">✏️ Тест</button>
+        </div>
+
+        <!-- List Mode -->
+        <div id="vocab-list-view" class="vocab-view active">
+          <div class="search-box">
+            <input type="text" id="vocab-search" placeholder="Поиск слова...">
+          </div>
+          <div id="vocab-list" class="vocab-list"></div>
+        </div>
+
+        <!-- Cards Mode -->
+        <div id="vocab-cards-view" class="vocab-view">
+          <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+              <div class="flashcard-inner">
+                <div class="flashcard-front">
+                  <span class="flashcard-word"></span>
+                </div>
+                <div class="flashcard-back">
+                  <span class="flashcard-translation"></span>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Нажмите на карточку, чтобы перевернуть</p>
+          </div>
+          <div class="flashcard-controls">
+            <button id="card-prev" class="btn btn-icon">⬅️</button>
+            <span id="card-counter" class="card-counter">1 / 30</span>
+            <button id="card-next" class="btn btn-icon">➡️</button>
+          </div>
+          <div class="flashcard-actions">
+            <button id="card-hard" class="btn btn-danger">😓 Сложно</button>
+            <button id="card-easy" class="btn btn-success">✅ Знаю</button>
+          </div>
+          <div class="flashcard-settings">
+            <label>
+              <input type="checkbox" id="show-fr-first" checked>
+              Показывать сначала французский
+            </label>
+            <label>
+              <input type="checkbox" id="shuffle-cards">
+              Перемешать карточки
+            </label>
+          </div>
+        </div>
+
+        <!-- Test Mode -->
+        <div id="vocab-test-view" class="vocab-view">
+          <div class="test-card">
+            <div class="test-prompt">
+              <span class="test-direction">🇷🇺 → 🇫🇷</span>
+              <p id="test-word" class="test-word"></p>
+            </div>
+            <input type="text" id="test-input" class="test-input" placeholder="Введите перевод..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <div id="test-feedback" class="test-feedback"></div>
+            <div class="test-buttons">
+              <button id="test-check" class="btn btn-primary">Проверить</button>
+              <button id="test-skip" class="btn btn-secondary">Пропустить</button>
+            </div>
+            <div class="test-stats">
+              <span>✅ <span id="test-correct">0</span></span>
+              <span>❌ <span id="test-wrong">0</span></span>
+              <span>📊 <span id="test-accuracy">0%</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRAMMAIRE Section -->
+      <section id="grammaire" class="section">
+        <div class="section-header">
+          <h2>📐 Grammaire</h2>
+          <p>Грамматика урока</p>
+        </div>
+
+        <div class="grammar-nav">
+          <button class="grammar-tab active" data-grammar="imperatif">L'impératif</button>
+          <button class="grammar-tab" data-grammar="imparfait">L'imparfait</button>
+          <button class="grammar-tab" data-grammar="verbes">Verbes 2gr</button>
+        </div>
+
+        <div id="grammar-content" class="grammar-content">
+          <!-- Grammar content will be inserted here -->
+        </div>
+
+        <div id="conjugation-practice" class="conjugation-practice">
+          <h4>🔄 Практика спряжения</h4>
+          <div class="conj-verb-select">
+            <label>Выберите глагол:</label>
+            <select id="conj-verb-select">
+              <option value="réunir">réunir (собирать)</option>
+              <option value="finir">finir (заканчивать)</option>
+              <option value="choisir">choisir (выбирать)</option>
+              <option value="vivre">vivre (жить)</option>
+              <option value="recevoir">recevoir (получать)</option>
+            </select>
+          </div>
+          <div class="conj-tense-select">
+            <label>Время:</label>
+            <select id="conj-tense-select">
+              <option value="present">Présent</option>
+              <option value="imparfait">Imparfait</option>
+              <option value="imperatif">Impératif</option>
+            </select>
+          </div>
+          <div id="conj-exercise" class="conj-exercise">
+            <!-- Conjugation exercise will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- EXERCISES Section -->
+      <section id="exercises" class="section">
+        <div class="section-header">
+          <h2>✍️ Упражнения</h2>
+          <p>Переводы и вопросы</p>
+        </div>
+
+        <div class="exercise-tabs">
+          <button class="exercise-tab active" data-exercise="translate">🔄 Переводы</button>
+          <button class="exercise-tab" data-exercise="questions">❓ Вопросы</button>
+        </div>
+
+        <!-- Translation Exercises -->
+        <div id="exercise-translate" class="exercise-content active">
+          <div class="translate-card">
+            <div class="translate-prompt">
+              <span class="translate-label">Переведите на французский:</span>
+              <p id="translate-ru" class="translate-text"></p>
+            </div>
+            <textarea id="translate-input" class="translate-input" rows="3" placeholder="Введите перевод на французский..."></textarea>
+            <div id="translate-feedback" class="translate-feedback"></div>
+            <div class="translate-buttons">
+              <button id="translate-check" class="btn btn-primary">Проверить</button>
+              <button id="translate-show" class="btn btn-secondary">Показать ответ</button>
+              <button id="translate-next" class="btn btn-success">Следующее →</button>
+            </div>
+            <div class="translate-progress">
+              <span id="translate-counter">1 / 16</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions -->
+        <div id="exercise-questions" class="exercise-content">
+          <div class="questions-list">
+            <!-- Questions will be inserted here -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Install Prompt -->
+    <div id="install-prompt" class="install-prompt hidden">
+      <p>📲 Установите приложение для офлайн доступа</p>
+      <div class="install-buttons">
+        <button id="install-btn" class="btn btn-primary btn-sm">Установить</button>
+        <button id="install-dismiss" class="btn btn-secondary btn-sm">Позже</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/lesson3.js"></script>
+  <script src="app.js"></script>
+  
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('✅ Service Worker registered'))
+          .catch(err => console.log('❌ Service Worker error:', err));
+      });
+    }
+  </script>
+</body>
+</html>
