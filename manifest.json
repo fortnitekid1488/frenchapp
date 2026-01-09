@@ -2,7 +2,8 @@
   "name": "Français - Leçon 3",
   "short_name": "Français",
   "description": "Изучение французского языка - Урок 3 МГИМО",
-  "start_url": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#0f0f1a",
   "theme_color": "#1a1a2e",
@@ -15,6 +16,9 @@
       "purpose": "any"
     }
   ],
-  "categories": ["education", "language"],
+  "categories": [
+    "education",
+    "language"
+  ],
   "lang": "ru"
 }
